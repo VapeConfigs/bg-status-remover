@@ -9,6 +9,7 @@ const client = new Client({
 /**
  * DISCORD : aisgege
  * BY AISGEGE 
+ * SILAHKAN PAKAI SEPUASNYA
  */
 
 let statusIndex = 0;
