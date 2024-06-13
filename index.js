@@ -11,14 +11,14 @@ let statusIndex = 0;
 function update() {
   const currentActivityName = config.statusMessage[statusIndex % config.statusMessage.length];
   client.user.setPresence({
-    activities: [{ name: currentActivityName, type: ActivityType.Custom }],
+    activities: [{ name: currentActivityName, type: ActivityType.Playing }],
     status: config.status,
   });
   statusIndex++;
 }
 
 client.once('ready', () => {
-  console.log(`✅ ${client.user.tag} sudah siap!`);
+  console.log(`✅ ${client.user.tag} Logged in!`);
   update();
 
   if (typeof config.statusInterval === 'number' && config.statusInterval > 0) {
